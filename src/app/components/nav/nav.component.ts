@@ -17,11 +17,13 @@ export class NavComponent {
     {label: 'Setor', icon: 'home', id: 3, hidden: true},
     {label: 'Quarteirão', icon: 'home', id: 4, hidden: true},
     {label: 'Relatórios', icon: 'home', iconExpandMenu: 'chevron-right', iconExpandedMenu: 'chevron-down', id: 5, hidden: true},
-    {label: 'Boletim', icon: 'home', id: 6, hidden: false, exapandMenu: true},
+    {label: 'Boletim', icon: 'home', id: 6, hidden: false, expandMenu: true},
     {label: 'Feedback', icon: 'home', id: 7, hidden: true},
   ];
+
   expanded(button: any){
     if (button === 5){
+      this.expandMenu = !this.expandMenu;
       this.buttonData[6].hidden = !this.buttonData[6].hidden;
     }
   }
@@ -31,7 +33,8 @@ export class NavComponent {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
 }
 
