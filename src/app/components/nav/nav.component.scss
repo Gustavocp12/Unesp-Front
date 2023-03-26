@@ -1,0 +1,8 @@
+#btnNavLeft:focus, #btnNavTop:focus, #btnNavTopMode:focus, #btnNavLeftHidden:focus {
+  box-shadow: none !important;
+}
+
+#btnNavLeft:hover, #btnNavTop:hover, #btnNavTopMode:hover, #btnNavLeftHidden:hover {
+  background-color: var(--surface-100) !important;
+}
+
