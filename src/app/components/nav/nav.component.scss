@@ -1,8 +1,18 @@
-#btnNavLeft:focus, #btnNavTop:focus, #btnNavTopMode:focus, #btnNavLeftHidden:focus {
+#btnNavTopSair:focus, #btnNavTopOptions:focus{
   box-shadow: none !important;
 }
 
-#btnNavLeft:hover, #btnNavTop:hover, #btnNavTopMode:hover, #btnNavLeftHidden:hover {
-  background-color: var(--surface-100) !important;
+#btnNavTopSair:hover, #btnNavTopOptions:hover{
+  background-color: var(--azul-claro-20) !important;
+}
+
+#btnNavTopSair:hover::after, #btnNavTopOptions:hover::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--azul-claro);
 }
 

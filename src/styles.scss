@@ -8,4 +8,35 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+/* Variaveis de cores globais*/
+
+:root{
+  /* Azul */
+  --azul-claro: #A4BCFD;
+  --azul-claro-20: rgba(164, 188, 253, 0.2);
+  --azul-cinza: #667085;
+  --azul-escuro: #101828;
+  --azul-ceu: #E0F2FE;
+
+  /* Branco */
+  --branco: #FFFFFF;
+  --branco-cinza-claro: #F2F4F7;
+  --branco-cinza-medio: #EAECF5;
+  --branco-cinza: #D0D5DD;
+
+  /* Preto */
+  --preto: #000000;
+
+  /* Vermelho */
+  --vermelho-claro-medio: #F04438;
+  --vermelho-claro: #FEE4E2;
+
+  /* Verde */
+  --verde-claro: #32D583;
+
+  /* Roxo */
+  --roxo: #7F56D9;
 }

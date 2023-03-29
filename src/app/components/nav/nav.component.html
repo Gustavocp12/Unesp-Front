@@ -1,35 +1,21 @@
 
-  <section class="navTop w-full h-4rem flex align-items-center justify-content-between p-5 pl-3">
-    <img src="../../../assets/Logo_preto.png" class="w-12rem">
+  <section class="navTop w-full h-4rem flex align-items-center justify-content-between p-5 pl-3 shadow-2">
+    <img src="../../../assets/image/logo.png" class="w-10rem">
     <div class="options flex">
+      <ng-container *ngFor="let data of buttonData">
+        <button pButton
+                icon=""
+                label="{{data.label}}"
+                class="border-none text-black-alpha-90 text-bold border-noround text-lg h-4rem"
+                [ngStyle]="{'background-color': data.selected === true ? 'var(--azul-claro-20)' : 'var(--branco)'}"
+                id="btnNavTopOptions">
+        </button>
+      </ng-container>
       <button pButton
-              icon="{{modo == true ? 'pi pi-sun' : 'pi pi-moon'}}"
-              class="border-none bg-white text-black-alpha-90 text-bold border-round-lg"
-              id="btnNavTopMode" (click)="modoNoturno()">
-      </button>
-      <button pButton
-              icon="pi pi-power-off"
+              icon=""
               label="Sair"
-              class="border-none bg-white text-black-alpha-90 text-bold border-round-lg text-lg"
-              id="btnNavTop">
+              class="border-none bg-white text-black-alpha-90 text-bold border-noround text-lg h-4rem"
+              id="btnNavTopSair">
       </button>
     </div>
-  </section>
-
-  <section class="navLeft flex flex-column w-15rem h-full fixed">
-    <ng-container *ngFor="let data of buttonData">
-      <button pButton *ngIf="data.hidden === true" (click)="expanded(data.id)"
-              class="border-noround border-none font-bold text-base text-black-alpha-90 {{data.expandMenu === true ? 'fadeinleft' : ''}}"
-              id="btnNavLeft"
-              iconPos="right"
-              label="{{data.expandMenu === true ? data.label : ''}}"
-              icon="pi pi-{{data.icon}} font-bold text-base text-black-alpha-90"
-              [ngStyle]="{'background-color': data.selected === true ? 'var(--surface-100)' : '#ffffff'}">
-        <div class="flex align-items-center w-full" *ngIf="data.expandMenu !== true">
-          <span class="pl-4 text-base text-black-alpha-90">{{data.label}}</span>
-          <i class="pi pi-{{expandMenu === false ? data.iconExpandMenu : data.iconExpandedMenu}} text-sm w-full justify-content-end flex"></i>
-        </div>
-        <div class="w-full" *ngIf="data.expandMenu === true"></div>
-      </button>
-    </ng-container>
   </section>
