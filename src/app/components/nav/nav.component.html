@@ -1,21 +1,21 @@
 
-  <section class="navTop w-full h-4rem flex align-items-center justify-content-between p-5 pl-3 shadow-2">
+  <section class="navTop w-full h-4rem flex align-items-center justify-content-between p-5 pl-3 shadow-2 bg-white">
     <img src="../../../assets/image/logo.png" class="w-10rem">
     <div class="options flex">
       <ng-container *ngFor="let data of buttonData">
         <button pButton
                 icon=""
                 label="{{data.label}}"
-                class="border-none text-black-alpha-90 text-bold border-noround text-lg h-4rem"
-                [ngStyle]="{'background-color': data.selected === true ? 'var(--azul-claro-20)' : 'var(--branco)'}"
-                id="btnNavTopOptions">
+                class="border-none text-black-alpha-90 text-bold border-noround text-lg h-4rem bg-white"
+                [ngClass]="{'selected': data.selected === true}"
+                id="btnNavOptions">
         </button>
       </ng-container>
       <button pButton
               icon=""
               label="Sair"
               class="border-none bg-white text-black-alpha-90 text-bold border-noround text-lg h-4rem"
-              id="btnNavTopSair">
+              id="btnNavSair">
       </button>
     </div>
   </section>

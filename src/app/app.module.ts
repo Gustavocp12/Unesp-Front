@@ -10,6 +10,10 @@ import {MenubarModule} from "primeng/menubar";
 import {FormsModule} from "@angular/forms";
 import {TieredMenuModule} from "primeng/tieredmenu";
 import {MenuModule} from "primeng/menu";
+import {CardModule} from "primeng/card";
+import {DropdownModule} from "primeng/dropdown";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {ChartModule} from "primeng/chart";
 
 @NgModule({
   declarations: [
@@ -18,13 +22,17 @@ import {MenuModule} from "primeng/menu";
     DashboardComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     ButtonModule,
     MenubarModule,
     FormsModule,
     TieredMenuModule,
-    MenuModule
+    MenuModule,
+    CardModule,
+    DropdownModule,
+    ChartModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

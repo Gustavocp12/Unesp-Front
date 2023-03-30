@@ -1,1 +1,48 @@
 <app-nav></app-nav>
+
+<section class="grid w-full">
+
+  <div class="col-5 p-5">
+    <p-card styleClass="w-full h-auto mb-6 shadow-4" id="grafico">
+      <h3 class="mb-3 border-1 inline-block border-red-200 bg-red-200 text-white p-2 border-round-xl">RISCOS POR ÁREA</h3>
+      <div>
+        <p-dropdown [options]="areas" [(ngModel)]="areaSelecionada" [showClear]="true" optionLabel="name" styleClass="w-20rem" placeholder="Selecione a área" id="inputGrafico">
+          <ng-template pTemplate="selectedItem">
+            <div class="flex align-items-center gap-2" *ngIf="areaSelecionada">
+              <div>{{ areaSelecionada.name }}</div>
+            </div>
+          </ng-template>
+          <ng-template let-data pTemplate="item">
+            <div class="flex align-items-center gap-2">
+              <div>{{ data.name }}</div>
+            </div>
+          </ng-template>
+        </p-dropdown>
+      </div>
+      <div class="card flex justify-content-center mt-3">
+        <p-chart type="doughnut" [data]="data" [options]="options" [responsive]="true" [width]="'300px'"></p-chart>
+      </div>
+    </p-card>
+
+    <p-card styleClass="w-5 shadow-4 mb-6" id="agentes">
+      <h2>Agentes</h2>
+      <p class="text-sm pl-3 font-bold">Quantidade de agentes cadastrados</p>
+      <div class="number flex justify-content-center mt-3">
+        <p class="text-5xl font-bold border-circle p-4">10</p>
+      </div>
+    </p-card>
+
+    <p-card styleClass="w-7 border-round-2xl shadow-4 cursor-pointer" id="feedback">
+      <div class="flex align-items-center">
+        <i class="pi pi-thumbs-up text-3xl"></i>
+        <div class="flex flex-column pl-3">
+          <h2>Feedback</h2>
+          <p class="text-sm font-bold">Dê seu feedback para melhorarmos o aplicativo!</p>
+        </div>
+      </div>
+    </p-card>
+  </div>
+
+  <div class="col"></div>
+</section>
+

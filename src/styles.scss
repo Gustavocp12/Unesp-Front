@@ -11,6 +11,33 @@
   font-family: Poppins, sans-serif;
 }
 
+body{
+  background-color: var(--branco-cinza-claro);
+}
+
+/* Alteração do scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--branco-cinza-medio);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--azul-claro-20);
+  border-radius: var(--border-radius);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--azul-cinza);
+}
+
 /* Variaveis de cores globais*/
 
 :root{
@@ -31,6 +58,7 @@
   --preto: #000000;
 
   /* Vermelho */
+  --vermelho-escuro: #D32F2F;
   --vermelho-claro-medio: #F04438;
   --vermelho-claro: #FEE4E2;
 

@@ -1,0 +1,26 @@
+#agentes{
+
+  h2 {
+    color: var(--preto);
+  }
+
+  p{
+    color: var(--azul-cinza);
+  }
+
+  .number{
+
+    p{
+      color: var(--preto);
+      border: 5px solid var(--branco-cinza-medio);
+    }
+
+  }
+
+}
+
+#feedback{
+  p{
+    color: var(--azul-cinza);
+  }
+}

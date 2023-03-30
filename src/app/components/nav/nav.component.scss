@@ -1,12 +1,12 @@
-#btnNavTopSair:focus, #btnNavTopOptions:focus{
+#btnNavSair:focus, #btnNavOptions:focus{
   box-shadow: none !important;
 }
 
-#btnNavTopSair:hover, #btnNavTopOptions:hover{
+#btnNavSair:hover, #btnNavOptions:hover{
   background-color: var(--azul-claro-20) !important;
 }
 
-#btnNavTopSair:hover::after, #btnNavTopOptions:hover::after{
+#btnNavSair:hover::after, #btnNavOptions:hover::after{
   content: "";
   position: absolute;
   left: 0;
@@ -16,3 +16,16 @@
   background-color: var(--azul-claro);
 }
 
+.selected{
+  background-color: var(--azul-claro-20) !important;
+}
+
+.selected::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--azul-claro);
+}
