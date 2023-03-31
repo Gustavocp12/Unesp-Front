@@ -14,12 +14,21 @@ import {CardModule} from "primeng/card";
 import {DropdownModule} from "primeng/dropdown";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ChartModule} from "primeng/chart";
+import { AgentesComponent } from './modules/agentes/agentes.component';
+import {TableModule} from "primeng/table";
+import {InputTextModule} from "primeng/inputtext";
+import { AdicionarAgenteComponent } from './modal/adicionar-agente/adicionar-agente.component';
+import {InputMaskModule} from "primeng/inputmask";
+import {CalendarModule} from "primeng/calendar";
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    DashboardComponent
+    DashboardComponent,
+    AgentesComponent,
+    AdicionarAgenteComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -33,6 +42,11 @@ import {ChartModule} from "primeng/chart";
     CardModule,
     DropdownModule,
     ChartModule,
+    TableModule,
+    InputTextModule,
+    InputMaskModule,
+    CalendarModule,
+    ToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]

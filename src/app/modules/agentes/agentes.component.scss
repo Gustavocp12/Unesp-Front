@@ -1,0 +1,9 @@
+.card{
+  td:nth-child(1){
+    color: var(--azul-escuro) !important;
+  }
+
+  th, td:nth-child(2){
+    color: var(--azul-cinza) !important;
+  }
+}

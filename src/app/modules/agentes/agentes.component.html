@@ -1,0 +1,30 @@
+<app-nav></app-nav>
+<section class="mb-2 mt-2">
+  <div class="card flex justify-content-between p-2 px-4">
+    <h1 class="flex align-items-center border-1 inline-block border-blue-200 bg-blue-200 text-white p-2 border-round-xl">AGENTES</h1>
+    <span class="p-input-icon-left">
+          <i class="pi pi-search"></i>
+          <input pInputText type="text" [(ngModel)]="inputValue" placeholder="Buscar agente" class="w-30rem" />
+    </span>
+    <p-button label="Adicionar" icon="pi pi-plus" (click)="showSaveAgente()"></p-button>
+  </div>
+</section>
+<div class="card">
+  <p-table [value]="products" selectionMode="single" [paginator]="true" [rows]="3" [(selection)]="selectedProduct" dataKey="code" [tableStyle]="{'min-width': '50rem'}">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Nome</th>
+        <th>Email</th>
+        <th class="w-4rem"></th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+      <tr [pSelectableRow]="product" (click)="pegarId(product.id)">
+        <td>{{product.name}}</td>
+        <td>{{product.email}}</td>
+        <td><i class="pi pi-trash text-red-500"></i></td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+<p-toast></p-toast>

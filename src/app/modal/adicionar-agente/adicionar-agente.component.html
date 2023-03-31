@@ -1,0 +1,32 @@
+<div class="card flex justify-content-center align-items-center">
+  <div id="card">
+    <h2 class="flex justify-content-center mb-5">ADICIONAR AGENTE</h2>
+    <div class="card flex justify-content-center">
+      <div class="flex flex-column gap-2">
+        <label class="text-black-alpha-90 font-bold">Nome completo</label>
+        <span class="p-input-icon-left mb-3">
+          <i class="pi pi-user"></i>
+          <input pInputText class="w-30rem" id="nomeAgente" type="text" [(ngModel)]="nomeValue" placeholder="Nome do agente"/>
+        </span>
+        <label class="text-black-alpha-90 font-bold">Email</label>
+        <span class="p-input-icon-left mb-3">
+          <i class="pi pi-envelope"></i>
+          <input pInputText class="w-30rem" id="emailAgente" type="email" [(ngModel)]="emailValue" placeholder="Email do agente"/>
+        </span>
+        <label class="text-black-alpha-90 font-bold">CPF</label>
+        <span class="p-input-icon-left mb-3">
+          <i class="pi pi-id-card"></i>
+          <p-inputMask styleClass="w-30rem pl-5" mask="999.999.999-99" id="cpfAgente" [(ngModel)]="cpfValue" placeholder="CPF do agente"/>
+        </span>
+        <label class="text-black-alpha-90 font-bold">Data de nascimento</label>
+        <span class="p-input-icon-left">
+          <i class="pi pi-search"></i>
+          <p-calendar styleClass="w-30rem" icon="pi pi-calendar" [showIcon]="true" id="dataAgente" dateFormat="dd/mm/yy" [(ngModel)]="dataValue" [showClear]="true" placeholder="DD/MM/AAAA"/>
+        </span>
+        <span class="w-full flex justify-content-end mt-3">
+          <button pButton label="SALVAR" class="p-button-success w-12rem text-black-alpha-90 btnSave border-none" (click)="showSave(1)"></button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

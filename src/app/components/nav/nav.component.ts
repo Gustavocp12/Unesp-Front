@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { OnInit } from "@angular/core";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-nav',
@@ -10,13 +11,34 @@ export class NavComponent {
 
   buttonData: any = [
     {label: 'Home', icon: 'home', selected: true},
-    {label: 'Agentes', icon: 'home'},
-    {label: 'Sobre', icon: 'home'},
+    {label: 'Agentes', icon: 'home', selected: false},
+    {label: 'Sobre', icon: 'home', selected: false},
   ];
+  path: any;
 
-  constructor() {}
+  constructor(private route: ActivatedRoute) {
+    this.route.url.subscribe(urlSegments => {
+      this.path = urlSegments.map(segment => segment.path).join('/');
+    });
+  }
+  pageSelected() {
+    if (this.path === '') {
+      this.buttonData[0].selected = true;
+      this.buttonData[1].selected = false;
+      this.buttonData[2].selected = false;
+    }else if (this.path === 'agentes') {
+      this.buttonData[0].selected = false;
+      this.buttonData[1].selected = true;
+      this.buttonData[2].selected = false;
+    }else if (this.path === 'sobre') {
+      this.buttonData[0].selected = false;
+      this.buttonData[1].selected = false;
+      this.buttonData[2].selected = true;
+    }
+  }
 
   ngOnInit() {
+    this.pageSelected();
   }
 
 }
