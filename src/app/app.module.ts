@@ -21,6 +21,9 @@ import { AdicionarAgenteComponent } from './modal/adicionar-agente/adicionar-age
 import {InputMaskModule} from "primeng/inputmask";
 import {CalendarModule} from "primeng/calendar";
 import { ToastModule } from 'primeng/toast';
+import {ConfirmDialogModule} from "primeng/confirmdialog";
+import { LoginComponent } from './modules/login/login.component';
+import {PasswordModule} from "primeng/password";
 
 @NgModule({
   declarations: [
@@ -28,7 +31,8 @@ import { ToastModule } from 'primeng/toast';
     NavComponent,
     DashboardComponent,
     AgentesComponent,
-    AdicionarAgenteComponent
+    AdicionarAgenteComponent,
+    LoginComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -46,7 +50,9 @@ import { ToastModule } from 'primeng/toast';
     InputTextModule,
     InputMaskModule,
     CalendarModule,
-    ToastModule
+    ToastModule,
+    ConfirmDialogModule,
+    PasswordModule
   ],
   providers: [],
   bootstrap: [AppComponent]

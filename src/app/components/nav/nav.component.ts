@@ -10,9 +10,9 @@ import {ActivatedRoute} from "@angular/router";
 export class NavComponent {
 
   buttonData: any = [
-    {label: 'Home', icon: 'home', selected: true},
-    {label: 'Agentes', icon: 'home', selected: false},
-    {label: 'Sobre', icon: 'home', selected: false},
+    {label: 'Home', icon: 'home', selected: false, routerLink: '/dashboard'},
+    {label: 'Agentes', icon: 'home', selected: false, routerLink: '/agentes'},
+    {label: 'Sobre', icon: 'home', selected: false, routerLink: '/sobre'},
   ];
   path: any;
 
@@ -22,7 +22,7 @@ export class NavComponent {
     });
   }
   pageSelected() {
-    if (this.path === '') {
+    if (this.path === 'dashboard') {
       this.buttonData[0].selected = true;
       this.buttonData[1].selected = false;
       this.buttonData[2].selected = false;

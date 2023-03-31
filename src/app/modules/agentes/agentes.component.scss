@@ -7,3 +7,18 @@
     color: var(--azul-cinza) !important;
   }
 }
+
+::ng-deep .confirmDialog{
+
+  .p-dialog-footer{
+    display: flex;
+  }
+
+  .p-dialog-header{
+    display: flex;
+    justify-content: center;
+    color: var(--azul-escuro);
+  }
+
+}
+
