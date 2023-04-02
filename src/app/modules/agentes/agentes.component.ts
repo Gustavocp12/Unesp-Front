@@ -17,19 +17,18 @@ export class AgentesComponent implements OnInit, OnDestroy {
 
   constructor(public dialogService: DialogService, public messageService: MessageService, private confirmationService: ConfirmationService, private filterService: FilterService) {}
 
-  filteredProducts!: any[];
+  filteredAgents!: any[];
   searchValue: string = '';
   ref!: DynamicDialogRef;
-  selectedProduct: any;
+  selectedAgent: any;
   inputValue: any;
-  products: any = [
+  agentsList: any = [
     { id: 0, name: 'Nome 1', email: 'exemplo@gmail.com' },
     { id: 1, name: 'Nome 2', email: 'exemplo@gmail.com' },
     { id: 2, name: 'Nome 3', email: 'exemplo@gmail.com' },
     ];
   pegarId(id: any) {
-    this.selectedProduct = this.products.find((p: any) => p.id === id);
-    console.log(this.selectedProduct);
+    this.selectedAgent = this.agentsList.find((p: any) => p.id === id);
   }
 
   showSaveAgente(){
@@ -68,7 +67,7 @@ export class AgentesComponent implements OnInit, OnDestroy {
   }
 
   filterProducts() {
-    this.filteredProducts = this.filterService.filter(this.products, ['name', 'email'], this.searchValue, 'contains');
+    this.filteredAgents = this.filterService.filter(this.agentsList, ['name', 'email'], this.searchValue, 'contains');
   }
 
   ngOnDestroy() {

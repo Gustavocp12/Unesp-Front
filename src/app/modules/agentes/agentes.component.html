@@ -10,7 +10,7 @@
   </div>
 </section>
 <div class="card">
-  <p-table [value]="filteredProducts || products" selectionMode="single" [paginator]="true" [rows]="3" [(selection)]="selectedProduct" dataKey="id" [tableStyle]="{'min-width': '50rem'}">
+  <p-table [value]="filteredAgents || agentsList" selectionMode="single" [paginator]="true" [rows]="3" [(selection)]="selectedAgent" dataKey="id" [tableStyle]="{'min-width': '50rem'}">
     <ng-template pTemplate="header">
       <tr>
         <th>Nome</th>
@@ -18,10 +18,10 @@
         <th class="w-4rem"></th>
       </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-product>
-      <tr [pSelectableRow]="product" (click)="pegarId(product.id)">
-        <td>{{product.name}}</td>
-        <td>{{product.email}}</td>
+    <ng-template pTemplate="body" let-agent>
+      <tr [pSelectableRow]="agent" (click)="pegarId(agent.id)">
+        <td>{{agent.name}}</td>
+        <td>{{agent.email}}</td>
         <td><i class="pi pi-trash text-red-500" (click)="confirmDelete()"></i></td>
       </tr>
     </ng-template>
