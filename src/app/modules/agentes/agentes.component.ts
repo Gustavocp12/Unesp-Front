@@ -59,7 +59,7 @@ export class AgentesComponent implements OnInit, OnDestroy {
       reject: (type: any) => {
         switch (type) {
           case ConfirmEventType.REJECT:
-            this.messageService.add({ severity: 'warn', summary: 'Operação cancelada!', detail: 'A exclusão foi cancelada' });
+            this.messageService.add({ severity: 'info', summary: 'Operação cancelada!', detail: 'A exclusão foi cancelada' });
             break;
         }
       }
