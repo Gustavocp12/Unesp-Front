@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdicionarAgenteComponent } from './adicionar-agente.component';
+import { AdicionarAgenteComponent } from './adicionar-supervisor.component';
 
 describe('AdicionarAgenteComponent', () => {
   let component: AdicionarAgenteComponent;

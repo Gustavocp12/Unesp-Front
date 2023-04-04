@@ -1,16 +1,16 @@
 <app-nav></app-nav>
 <section class="mb-2 mt-2">
   <div class="card flex justify-content-between p-2 px-4">
-    <h1 class="flex align-items-center border-1 inline-block border-blue-200 bg-blue-200 text-white p-2 border-round-xl">AGENTES</h1>
+    <h1 class="flex align-items-center border-1 inline-block border-blue-200 bg-blue-200 text-white p-2 border-round-xl">SUPERVISORES</h1>
     <span class="p-input-icon-left">
           <i class="pi pi-search"></i>
-          <input pInputText type="text" [(ngModel)]="searchValue" (keyup)="filterProducts()" placeholder="Buscar agente" class="w-30rem" />
+          <input pInputText type="text" [(ngModel)]="searchValue" (keyup)="filterProducts()" placeholder="Buscar supervisor" class="w-30rem" />
     </span>
     <p-button label="Adicionar" icon="pi pi-plus" (click)="showSaveAgente()"></p-button>
   </div>
 </section>
 <div class="card">
-  <p-table [value]="filteredAgents || agentsList" selectionMode="single" [paginator]="true" [rows]="3" [(selection)]="selectedAgent" dataKey="id" [tableStyle]="{'min-width': '50rem'}">
+  <p-table [value]="filteredSupervisors || supervisorsList" selectionMode="single" [paginator]="true" [rows]="3" [(selection)]="selectedSupervisor" dataKey="id" [tableStyle]="{'min-width': '50rem'}">
     <ng-template pTemplate="header">
       <tr>
         <th>Nome</th>

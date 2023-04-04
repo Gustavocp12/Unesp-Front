@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import {DynamicDialogRef} from "primeng/dynamicdialog";
 
 @Component({
-  selector: 'app-adicionar-agente',
-  templateUrl: './adicionar-agente.component.html',
-  styleUrls: ['./adicionar-agente.component.scss'],
+  selector: 'app-adicionar-supervisor',
+  templateUrl: './adicionar-supervisor.component.html',
+  styleUrls: ['./adicionar-supervisor.component.scss'],
 })
-export class AdicionarAgenteComponent {
+export class AdicionarSupervisorComponent {
   nomeValue: any;
   emailValue: any;
   cpfValue: any;

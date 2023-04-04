@@ -11,7 +11,7 @@ export class NavComponent {
 
   buttonData: any = [
     {label: 'Home', icon: 'home', selected: false, routerLink: '/dashboard'},
-    {label: 'Agentes', icon: 'home', selected: false, routerLink: '/agentes'},
+    {label: 'Supervisores', icon: 'home', selected: false, routerLink: '/supervisores'},
     {label: 'Sobre', icon: 'home', selected: false, routerLink: '/sobre'},
   ];
   path: any;
@@ -26,7 +26,7 @@ export class NavComponent {
       this.buttonData[0].selected = true;
       this.buttonData[1].selected = false;
       this.buttonData[2].selected = false;
-    }else if (this.path === 'agentes') {
+    }else if (this.path === 'supervisores') {
       this.buttonData[0].selected = false;
       this.buttonData[1].selected = true;
       this.buttonData[2].selected = false;

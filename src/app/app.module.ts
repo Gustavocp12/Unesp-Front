@@ -14,10 +14,10 @@ import {CardModule} from "primeng/card";
 import {DropdownModule} from "primeng/dropdown";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ChartModule} from "primeng/chart";
-import { AgentesComponent } from './modules/agentes/agentes.component';
+import { SupervisoresComponent } from './modules/supervisores/supervisores.component';
 import {TableModule} from "primeng/table";
 import {InputTextModule} from "primeng/inputtext";
-import { AdicionarAgenteComponent } from './modal/adicionar-agente/adicionar-agente.component';
+import { AdicionarSupervisorComponent } from './modal/adicionar-supervisor/adicionar-supervisor.component';
 import {InputMaskModule} from "primeng/inputmask";
 import {CalendarModule} from "primeng/calendar";
 import { ToastModule } from 'primeng/toast';
@@ -30,8 +30,8 @@ import {PasswordModule} from "primeng/password";
     AppComponent,
     NavComponent,
     DashboardComponent,
-    AgentesComponent,
-    AdicionarAgenteComponent,
+    SupervisoresComponent,
+    AdicionarSupervisorComponent,
     LoginComponent
   ],
   imports: [
