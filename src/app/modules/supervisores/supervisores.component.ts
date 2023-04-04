@@ -3,10 +3,6 @@ import { AdicionarSupervisorComponent } from "../../modal/adicionar-supervisor/a
 import {DialogService, DynamicDialogRef} from "primeng/dynamicdialog";
 import {ConfirmationService, ConfirmEventType, FilterService, MessageService} from "primeng/api";
 
-class toastSaveNumber {
-  toastSave: number = 1;
-}
-
 @Component({
   selector: 'app-supervisores',
   templateUrl: './supervisores.component.html',
@@ -37,7 +33,7 @@ export class SupervisoresComponent implements OnInit, OnDestroy {
       baseZIndex: 10000,
     });
 
-    this.ref.onClose.subscribe((toastSave: toastSaveNumber) => {
+    this.ref.onClose.subscribe((toastSave) => {
       if (toastSave){
         this.messageService.add({ severity: 'success', summary: 'Supervisor salvo com sucesso!', detail: 'Foi enviado um email para o supervisor com seu usuário e senha' });
       }
