@@ -4,6 +4,7 @@
 
 #btnNavSair:hover, #btnNavOptions:hover{
   background-color: var(--azul-claro-20) !important;
+  transition: 0.5s;
 }
 
 #btnNavSair:hover::after, #btnNavOptions:hover::after{
