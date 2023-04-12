@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavComponent } from './components/nav/nav.component';
+import { NavComponent } from './layouts/nav/nav.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import {ButtonModule} from "primeng/button";
 import {MenubarModule} from "primeng/menubar";

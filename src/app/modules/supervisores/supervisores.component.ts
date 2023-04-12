@@ -51,13 +51,6 @@ export class SupervisoresComponent implements OnInit, OnDestroy {
       acceptIcon: 'pi pi-trash',
       accept: () => {
         this.messageService.add({ severity: 'success', summary: 'Excluido com sucesso!', detail: 'O supervisor foi excluido' });
-      },
-      reject: (type: any) => {
-        switch (type) {
-          case ConfirmEventType.REJECT:
-            this.messageService.add({ severity: 'info', summary: 'Operação cancelada!', detail: 'A exclusão foi cancelada' });
-            break;
-        }
       }
     });
   }

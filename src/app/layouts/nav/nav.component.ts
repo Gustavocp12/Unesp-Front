@@ -7,7 +7,7 @@ import {ActivatedRoute} from "@angular/router";
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
-export class NavComponent {
+export class NavComponent implements OnInit{
 
   buttonData: any = [
     {label: 'Home', icon: 'home', selected: false, routerLink: '/dashboard'},
