@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import { AdicionarSupervisorComponent } from "../../modals/adicionar-supervisor/adicionar-supervisor.component";
+import { AdicionarSupervisorComponent } from "./modal/adicionar-supervisor/adicionar-supervisor.component";
 import {DialogService, DynamicDialogRef} from "primeng/dynamicdialog";
 import {ConfirmationService, ConfirmEventType, FilterService, MessageService} from "primeng/api";
 

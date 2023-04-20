@@ -17,7 +17,7 @@ import {ChartModule} from "primeng/chart";
 import { SupervisoresComponent } from './modules/supervisores/supervisores.component';
 import {TableModule} from "primeng/table";
 import {InputTextModule} from "primeng/inputtext";
-import { AdicionarSupervisorComponent } from './modals/adicionar-supervisor/adicionar-supervisor.component';
+import { AdicionarSupervisorComponent } from './modules/supervisores/modal/adicionar-supervisor/adicionar-supervisor.component';
 import {InputMaskModule} from "primeng/inputmask";
 import {CalendarModule} from "primeng/calendar";
 import { ToastModule } from 'primeng/toast';
