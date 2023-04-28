@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Login } from "../../core/interfaces/Login";
 
 @Component({
   selector: 'app-login',
@@ -6,6 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  userValue: any;
-  passwordValue: any;
+
+  login: Login = {
+    user: '',
+    password: ''
+  };
+
 }

@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import { Area } from "../../core/interfaces/Area";
 
 @Component({
   selector: 'app-dashboard',
@@ -7,10 +8,10 @@ import {Component, OnInit} from '@angular/core';
 })
 export class DashboardComponent implements OnInit{
 
-  areaSelecionada: any;
+  areaSelecionada: Area = { name: '' };
   data: any;
   options: any;
-  areas: any[] = [
+  areas: Area[] = [
     { name: 'Norte' },
     { name: 'Sul' },
     { name: 'Leste' },

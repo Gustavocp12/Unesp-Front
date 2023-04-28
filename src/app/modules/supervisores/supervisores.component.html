@@ -20,7 +20,7 @@
     </ng-template>
     <ng-template pTemplate="body" let-agent>
       <tr [pSelectableRow]="agent" (click)="pegarId(agent.id)">
-        <td>{{agent.name}}</td>
+        <td>{{agent.nome}}</td>
         <td>{{agent.email}}</td>
         <td><i class="pi pi-trash text-red-500" (click)="confirmDelete()"></i></td>
       </tr>

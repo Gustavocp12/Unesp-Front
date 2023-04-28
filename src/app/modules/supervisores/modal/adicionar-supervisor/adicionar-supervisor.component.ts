@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {DynamicDialogRef} from "primeng/dynamicdialog";
+import { Supervisores } from "../../../../core/interfaces/Supervisores";
 
 @Component({
   selector: 'app-adicionar-supervisor',
@@ -7,10 +8,14 @@ import {DynamicDialogRef} from "primeng/dynamicdialog";
   styleUrls: ['./adicionar-supervisor.component.scss'],
 })
 export class AdicionarSupervisorComponent {
-  nomeValue: any;
-  emailValue: any;
-  cpfValue: any;
-  dataValue: any;
+
+  Supervisor: Supervisores = {
+    id: 0,
+    nome: '',
+    email: '',
+    cpf: '',
+    dataNascimento: new Date()
+  };
 
   constructor(public ref: DynamicDialogRef) { }
 

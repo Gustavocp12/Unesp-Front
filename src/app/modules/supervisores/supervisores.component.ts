@@ -2,6 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import { AdicionarSupervisorComponent } from "./modal/adicionar-supervisor/adicionar-supervisor.component";
 import {DialogService, DynamicDialogRef} from "primeng/dynamicdialog";
 import {ConfirmationService, ConfirmEventType, FilterService, MessageService} from "primeng/api";
+import {Supervisores} from "../../core/interfaces/Supervisores";
 
 @Component({
   selector: 'app-supervisores',
@@ -13,18 +14,18 @@ export class SupervisoresComponent implements OnInit, OnDestroy {
 
   constructor(public dialogService: DialogService, public messageService: MessageService, private confirmationService: ConfirmationService, private filterService: FilterService) {}
 
-  filteredSupervisors!: any[];
+  filteredSupervisors!: Supervisores[];
   searchValue: string = '';
   ref!: DynamicDialogRef;
   selectedSupervisor: any;
   inputValue: any;
-  supervisorsList: any = [
-    { id: 0, name: 'Nome 1', email: 'exemplo@gmail.com' },
-    { id: 1, name: 'Nome 2', email: 'exemplo@gmail.com' },
-    { id: 2, name: 'Nome 3', email: 'exemplo@gmail.com' },
+  supervisorsList: Supervisores[] = [
+    { id: 0, nome: 'Nome 1', email: 'exemplo@gmail.com', cpf: '', dataNascimento: new Date() },
+    { id: 1, nome: 'Nome 2', email: 'exemplo@gmail.com', cpf: '', dataNascimento: new Date() },
+    { id: 2, nome: 'Nome 3', email: 'exemplo@gmail.com', cpf: '', dataNascimento: new Date() },
     ];
   pegarId(id: any) {
-    this.selectedSupervisor = this.supervisorsList.find((p: any) => p.id === id);
+    this.selectedSupervisor = this.supervisorsList.find((p: Supervisores) => p.id === id);
   }
 
   showSaveAgente(){
@@ -56,7 +57,7 @@ export class SupervisoresComponent implements OnInit, OnDestroy {
   }
 
   filterProducts() {
-    this.filteredSupervisors = this.filterService.filter(this.supervisorsList, ['name', 'email'], this.searchValue, 'contains');
+    this.filteredSupervisors = this.filterService.filter(this.supervisorsList, ['nome', 'email'], this.searchValue, 'contains');
   }
 
   ngOnDestroy() {

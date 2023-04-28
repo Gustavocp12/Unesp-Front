@@ -6,7 +6,7 @@
     <p-card styleClass="w-full h-auto mb-6 shadow-4" id="grafico">
       <h3 class="mb-3 border-1 inline-block border-red-200 bg-red-200 text-white p-2 border-round-xl">RISCOS POR ÁREA</h3>
       <div>
-        <p-dropdown [options]="areas" [(ngModel)]="areaSelecionada" [showClear]="true" optionLabel="name" styleClass="w-20rem" placeholder="Selecione a área" id="inputGrafico">
+        <p-dropdown [options]="areas" [(ngModel)]="areaSelecionada" optionLabel="name" styleClass="w-20rem" placeholder="Selecione a área" id="inputGrafico">
           <ng-template pTemplate="selectedItem">
             <div class="flex align-items-center gap-2" *ngIf="areaSelecionada">
               <div>{{ areaSelecionada.name }}</div>

@@ -9,11 +9,11 @@
     </section>
       <div class="flex flex-column gap-2 mt-6">
         <label class="font-bold text-bluegray-900">Usuário</label>
-        <input class="font-bold" pInputText id="usuario" placeholder="Insira seu usuário" [(ngModel)]="userValue" />
+        <input class="font-bold" pInputText id="usuario" placeholder="Insira seu usuário" [(ngModel)]="login.user" />
       </div>
     <div class="flex flex-column gap-2 mt-4 mb-7">
       <label class="font-bold text-bluegray-900">Senha</label>
-      <p-password inputStyleClass="w-full font-bold" styleClass="w-full" [(ngModel)]="passwordValue" [toggleMask]="true" [feedback]="false" placeholder="Insira sua senha"></p-password>
+      <p-password inputStyleClass="w-full font-bold" styleClass="w-full" [(ngModel)]="login.password" [toggleMask]="true" [feedback]="false" placeholder="Insira sua senha"></p-password>
     </div>
     <p-button label="Entrar" styleClass="w-full bg-purple-500 border-purple-500 btnLogin"></p-button>
   </p-card>
